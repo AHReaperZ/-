@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <cmath>
 
 using namespace std;
@@ -14,7 +14,7 @@ int main() {
 		cout << "Введите n (целое положительное число): ";
 		cin >> n;
 
-		if (!cin.good()) {
+		if (!cin.good() || (n<0)) {
 			cin.clear();
 			cin.ignore();
 			cout << "Введен неверный параметр." << endl;
@@ -29,7 +29,7 @@ int main() {
 		cout << "Введите порядок момента K (целое положительное число): ";
 		cin >> k;
 
-		if (!cin.good()) {
+		if (!cin.good() || (n < 0)) {
 			cin.clear();
 			cin.ignore();
 			cout << "Введен неверный параметр." << endl;
