@@ -29,7 +29,7 @@ int main() {
 		cout << "Введите порядок момента K (целое положительное число): ";
 		cin >> k;
 
-		if (!cin.good() || (n < 0)) {
+		if (!cin.good() || (k < 0)) {
 			cin.clear();
 			cin.ignore();
 			cout << "Введен неверный параметр." << endl;
@@ -63,7 +63,7 @@ int main() {
 			cout << "Введите вероятности p в %" << i + 1 << ": ";
 			cin >> p[i];
 			//cout << "V = " << v << endl;
-			if ( (!cin.good()) || ((v+p[i]) > 100 ) ) {
+			if ( (!cin.good()) || ((v+p[i]) > 100 ) || (p[i] < 0)) {
 				cin.clear();
 				cin.ignore();
 				cout << "Введен неверный параметр." << endl;
