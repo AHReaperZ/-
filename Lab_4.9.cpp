@@ -3,6 +3,8 @@
 
 using namespace std;
 
+double func(double *, double *, int);
+
 int main() {
 
 	setlocale(LC_ALL, "Russian");
@@ -16,7 +18,7 @@ int main() {
 
 		if (!cin.good() || (n < 0)) {
 			cin.clear();
-			cin.ignore();
+			cin.ignore(32767, '\n');
 			cout << "Введен неверный параметр." << endl;
 		}
 		else break;
@@ -32,7 +34,7 @@ int main() {
 
 			if (!cin.good()) {
 				cin.clear();
-				cin.ignore();
+				cin.ignore(32767, '\n');
 				cout << "Введен неверный параметр." << endl;
 			}
 			else break;
@@ -49,7 +51,7 @@ int main() {
 
 			if (!cin.good()) {
 				cin.clear();
-				cin.ignore();
+				cin.ignore(32767, '\n');
 				cout << "Введен неверный параметр." << endl;
 			}
 			else break;
@@ -57,16 +59,18 @@ int main() {
 		} while (true);
 	}
 
-	double sum = 0.0;
-
-	for (int i = 0; i < n; i++) {
-
-		sum += a[i]*b[i];
-
-	}
-
-	cout << "Скалярное произведение векторов a и b = " << sum << endl;
+	cout << "Скалярное произведение векторов a и b = " << func(a, b, n) << endl;
 
 	delete[] a;
 	delete[] b;
+}
+
+double func(double *a, double *b, int n) {
+
+	double c = 0;
+	for (int i = 0; i < n; i++) {
+		
+		c += a[i] * b[i];
+	}
+		return (c);
 }
