@@ -16,7 +16,7 @@ int main() {
 
 		if (!cin.good() || (n < 0)) {
 			cin.clear();
-			cin.ignore();
+			cin.ignore(32767, '\n');
 			cout << "Введен неверный параметр." << endl;
 		}
 		else break;
@@ -31,7 +31,7 @@ int main() {
 
 		if (!cin.good() || (m < 0)) {
 			cin.clear();
-			cin.ignore();
+			cin.ignore(32767, '\n');
 			cout << "Введен неверный параметр." << endl;
 		}
 		else break;
@@ -63,7 +63,7 @@ int main() {
 
 		if (!cin.good()) {
 			cin.clear();
-			cin.ignore();
+			cin.ignore(32767, '\n');
 			cout << "Введен неверный параметр." << endl;
 		}
 		else break;
