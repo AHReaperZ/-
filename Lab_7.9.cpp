@@ -17,13 +17,14 @@ public:
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
     VectorM vector_a {};
 
     vector_a.x = 4.5; 
     vector_a.y = 1.3;
     vector_a.z = -2.5;
 
-    cout << vector_a.modul();
+    cout << "Модуль вектора = " << vector_a.modul();
 
     return 0;
 }
